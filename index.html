@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Bageterie Boulevard Kartičky</title>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" type="text/css" href="styles/connect.css" />
+		<script src="index.js" defer></script>
+	</head>
+	<body>
+		<header>
+			<div><a id="bbdomu" href="https://bbdomu.cz/cs/shipping/courier"></a></div>
+			<div id="GenCard"><h1>Generátor Kartiček</h1></div>
+			<div><h4 id="serverStatus">Server Offline</h4></div>
+		</header>
+		<main>
+			<div id="InfoHeaders">
+				<h2>Limit najednou: 5 Karet</h2>
+				<h2>Denní limit: 25 Karet</h2>
+			</div>
+			<div class="container" id="container">
+				<input type="number" id="numberInput" placeholder="Kolik karet" oninput="validateNumber(this)" min="1" max="5" required />
+				<input type="submit" value="Odeslat" onclick="submitForm()" />
+			</div>
+			<div>
+				<div class="table-container">
+					<table id="baguete-table" class="hidden">
+						<thead>
+							<tr>
+								<th>Číslo karty</th>
+								<th>Počet Baget na Kartě</th>
+								<th>Ověřeno</th>
+							</tr>
+						</thead>
+						<tbody></tbody>
+					</table>
+				</div>
+				<div>
+					<button onclick="putContainerBack()" class="hidden" id="restorebutton">Vygenerovat další karty</button>
+				</div>
+			</div>
+		</main>
+		<footer>
+			<h4 id="serverStatusFooter">Server Offline</h4>
+		</footer>
+	</body>
+</html>

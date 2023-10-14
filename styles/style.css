@@ -1,0 +1,40 @@
+::-webkit-scrollbar {
+	width: 1em;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: #f8e9c2;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #f1b600;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #d9a400;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button,
+input[type="number"] {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+	-moz-appearance: textfield;
+}
+
+body {
+	margin: 0;
+}
+.table-container{
+	margin: 2rem 0.5rem;
+}
+th{
+	padding: 0.5rem;
+}
